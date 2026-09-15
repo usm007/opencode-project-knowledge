@@ -1,0 +1,5 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "project-knowledge",
+  "description": "Compact per-repository project knowledge (.project/) — auto context, bootstrap, refresh"
+}

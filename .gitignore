@@ -1,0 +1,39 @@
+# Build / cache / dependencies
+node_modules/
+dist/
+build/
+target/
+out/
+.next/
+.nuxt/
+coverage/
+
+# Test artifacts (local disposable repos)
+tests/tmp/
+tests/fixtures/*/tmp/
+*.tmp
+
+# Project-knowledge ephemeral state (never commit per-project stale state;
+# this repo's own .project/state is also ephemeral)
+.project/state/
+**/.project/state/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Secrets / env (never commit)
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+secrets/
+
+# Internal build prompt (local only, not published)
+OpenCode Project Knowledge — Repository Build Prompt.md

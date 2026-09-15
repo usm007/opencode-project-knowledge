@@ -1,0 +1,13 @@
+{
+  "name": "opencode-project-knowledge",
+  "version": "1.2.0",
+  "description": "Universal one-time-installable project knowledge for OpenCode and Antigravity IDE/CLI (shared engine)",
+  "license": "MIT",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node tests/run.js && node tests/e2e.js",
+    "checksums": "node tools/gen-checksums.js",
+    "checksums:check": "node tools/gen-checksums.js --check"
+  },
+  "engines": { "node": ">=18" }
+}

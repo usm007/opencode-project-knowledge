@@ -1,0 +1,31 @@
+name: test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        node: [18, 20, 22]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: syntax checks
+        shell: bash
+        run: |
+          node --check project-knowledge/detect.js
+          node --check project-knowledge/context.js
+          node --check project-knowledge/status.js
+          node --check project-knowledge/refresh.js
+          node --check project-knowledge/bootstrap.mjs
+          node --check plugins/project-knowledge.js
+      - run: npm test
+      - name: verify checksums manifest is current
+        run: npm run checksums:check
