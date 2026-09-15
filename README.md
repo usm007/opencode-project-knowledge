@@ -36,11 +36,10 @@ powershell -ExecutionPolicy Bypass -File install.ps1
 powershell -ExecutionPolicy Bypass -File install.ps1 -DryRun   # preview only
 ```
 
-Once this repo is published on GitHub, this one-liner will also work
-(replace `<owner>/<repo>` with the real location):
+One-liner (no clone needed):
 
 ```powershell
-irm https://raw.githubusercontent.com/<owner>/<repo>/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/usm007/opencode-project-knowledge/main/install.ps1 | iex
 ```
 
 Linux/macOS:
